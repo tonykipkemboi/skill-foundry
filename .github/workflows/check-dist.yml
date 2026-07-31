@@ -1,0 +1,41 @@
+name: Check dist/ is up to date
+
+on:
+  pull_request:
+    paths:
+      - 'skills/**'
+      - 'shared-tool-reference.md'
+      - 'scripts/build-org-skills.sh'
+
+permissions:
+  contents: read
+
+jobs:
+  check-dist:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
+
+      - name: Build skill packages
+        run: bash scripts/build-org-skills.sh
+
+      - name: Check for uncommitted dist/ changes
+        run: |
+          # Compare extracted contents, not zip binaries (zip output varies across environments)
+          mkdir -p /tmp/committed /tmp/rebuilt
+          for skill in dist/*.skill; do
+            name="$(basename "$skill" .skill)"
+            mkdir -p "/tmp/rebuilt/$name"
+            unzip -o -q "$skill" -d "/tmp/rebuilt/$name"
+          done
+          git checkout HEAD -- dist/
+          for skill in dist/*.skill; do
+            name="$(basename "$skill" .skill)"
+            mkdir -p "/tmp/committed/$name"
+            unzip -o -q "$skill" -d "/tmp/committed/$name"
+          done
+          if ! diff -r /tmp/committed /tmp/rebuilt; then
+            echo "::error::dist/ is out of sync with skills/. Run 'bash scripts/build-org-skills.sh' and commit the result."
+            exit 1
+          fi
+          echo "dist/ is up to date."

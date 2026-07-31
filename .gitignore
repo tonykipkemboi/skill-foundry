@@ -1,0 +1,3 @@
+dist/.staging/
+.DS_Store
+.skill-findings.jsonl

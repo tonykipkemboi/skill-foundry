@@ -1,0 +1,10 @@
+{
+  "name": "DEPT_SLUG",
+  "displayName": "REPLACE: Human-Readable Plugin Name",
+  "description": "REPLACE: One sentence describing this department's plugin and what the skills do.",
+  "version": "1.0.0",
+  "author": {
+    "name": "YOUR-ORG"
+  },
+  "repository": "https://github.com/YOUR-ORG/REPO_NAME"
+}

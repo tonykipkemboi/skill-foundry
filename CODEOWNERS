@@ -1,0 +1,2 @@
+# Set the default reviewers for every packaging PR in repos created from this template.
+# * @your-github-handle @backup-reviewer

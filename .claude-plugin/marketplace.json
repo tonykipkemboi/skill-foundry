@@ -1,0 +1,17 @@
+{
+  "name": "DEPT_SLUG",
+  "owner": {
+    "name": "YOUR-ORG"
+  },
+  "metadata": {
+    "description": "REPLACE: Short description for the marketplace listing."
+  },
+  "plugins": [
+    {
+      "name": "DEPT_SLUG",
+      "displayName": "REPLACE: Human-Readable Plugin Name",
+      "description": "REPLACE: What skills are included and what they do.",
+      "source": "./"
+    }
+  ]
+}

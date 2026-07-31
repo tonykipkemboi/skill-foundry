@@ -1,0 +1,13 @@
+# gitleaks config for the template repo.
+# Our CI runs secrets via .github/scripts/check_secrets.sh (which path-filters
+# tests/ and docs/), but this config makes a raw `gitleaks dir .` clean too and
+# documents intent for any org-level gitleaks scan.
+[extend]
+useDefault = true
+
+[allowlist]
+description = "Test fixtures and design docs contain intentional example tokens, not real secrets"
+paths = [
+  '''tests/fixtures/.*''',
+  '''docs/.*''',
+]

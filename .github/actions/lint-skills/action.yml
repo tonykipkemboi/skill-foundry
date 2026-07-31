@@ -1,0 +1,51 @@
+name: Lint Skills
+description: Run skill policy checks (secrets, PII, action pinning, frontmatter, structure)
+runs:
+  using: composite
+  steps:
+    - name: Install gitleaks
+      shell: bash
+      run: |
+        cd /tmp
+        curl -sSL https://github.com/gitleaks/gitleaks/releases/download/v8.30.1/gitleaks_8.30.1_linux_x64.tar.gz -o gl.tgz
+        tar xzf gl.tgz gitleaks && sudo mv gitleaks /usr/local/bin/
+    - name: Install yq
+      shell: bash
+      run: |
+        sudo curl -sSL https://github.com/mikefarah/yq/releases/download/v4.53.2/yq_linux_amd64 -o /usr/local/bin/yq
+        sudo chmod +x /usr/local/bin/yq
+    - name: Run checks
+      id: checks
+      shell: bash
+      run: |
+        set +e
+        bash "${{ github.action_path }}/../../scripts/run-checks.sh" "$GITHUB_WORKSPACE"
+        echo "exit_code=$?" >> "$GITHUB_OUTPUT"
+    - name: Render comment
+      shell: bash
+      run: |
+        bash "${{ github.action_path }}/../../scripts/render_comment.sh" \
+          "$GITHUB_WORKSPACE/.skill-findings.jsonl" "${{ github.run_number }}" "${{ github.sha }}" \
+          > /tmp/skill-comment.md
+    - name: Find existing comment
+      if: github.event_name == 'pull_request'
+      id: fc
+      uses: peter-evans/find-comment@b30e6a3c0ed37e7c023ccd3f1db5c6c0b0c23aad # v4.0.0
+      with:
+        issue-number: ${{ github.event.pull_request.number }}
+        body-includes: '<!-- skill-policy:report -->'
+    - name: Upsert PR comment
+      if: github.event_name == 'pull_request'
+      uses: peter-evans/create-or-update-comment@e8674b075228eee787fea43ef493e45ece1004c9 # v5.0.0
+      with:
+        comment-id: ${{ steps.fc.outputs.comment-id }}
+        issue-number: ${{ github.event.pull_request.number }}
+        body-path: /tmp/skill-comment.md
+        edit-mode: replace
+    - name: Fail if hard findings
+      shell: bash
+      run: |
+        if [ "${{ steps.checks.outputs.exit_code }}" != "0" ]; then
+          echo "::error::Blocking skill policy findings. See the PR comment."
+          exit 1
+        fi
