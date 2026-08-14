@@ -52,6 +52,11 @@ pipelines. You inherit the guardrails:
 - **The slug/label trap.** Plugins ship with their lowercase slug as the visible
   title when `name` does double duty. -> `displayName` is set at creation; the slug
   never changes after launch (it is the command prefix and update cache key).
+- **Scanners reject sanitizers, and attach late.** SAST engines flag path-taking CLI
+  arguments in bundled scripts and do not accept custom sanitizer functions as taint
+  barriers; scripts must be stdin/stdout only (Step 1 guard). Separately, org scanners
+  can attach to a new repository after its first PR merges, so the second PR may fail
+  on first-PR code. -> the stdin/stdout rule, and Step 7's JSON-rollup check reading.
 
 ## How to use this file
 

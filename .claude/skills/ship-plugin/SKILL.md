@@ -86,6 +86,14 @@ inspect there first:
    account / employee search) instead of shipping one person's details. A skill configured
    for one person quietly breaks for everyone else and rots when that person changes roles.
 
+4. **Bundled scripts must be stdin/stdout only.** If a skill ships helper scripts
+   (Python, Node, etc.), they must read input from stdin and write to stdout, never
+   take file paths as CLI arguments. SAST scanners flag path-taking arguments as
+   path-traversal sinks and do not accept custom sanitizers as taint barriers; the
+   only durable fix is eliminating the pattern. Shell redirects (`script < in > out`)
+   preserve any file-based workflow. If an incoming script takes path arguments,
+   flag it to the author and convert it (with their sign-off) before packaging.
+
 Shell note for agents: quote paths and use **arrays** for lists in loops
 (`SKILLS=(a b c)`); a plain space-separated string silently becomes one item under zsh.
 
@@ -211,6 +219,20 @@ weeks. So:
 - After the user merges, verify the outcome: `git fetch && git show origin/main:.claude-plugin/plugin.json | jq .version`
   must show your bump. If it doesn't, a commit was stranded. Find it
   (`git log origin/main..<branch>`) and cherry-pick it onto a fresh PR immediately.
+
+**Reading CI status:** use the JSON rollup, never column-parsed text output. Check
+names containing spaces ("Vendor: SAST") break positional parsing and can silently
+mask a failure:
+
+```bash
+gh pr view <n> --json statusCheckRollup \
+  --jq '.statusCheckRollup[] | "\(.name // .context): \(.conclusion // .state)"'
+```
+
+**New-repo scanner lag:** org security scanners often attach to a repository minutes
+or hours after creation, so a brand-new repo's first PR may run with no scanner checks
+at all. The debt then lands on the second PR, which may fail on first-PR code. Expect
+this; it is not a regression in your change.
 
 Remind the user of the delivery step: existing plugin -> members click **Update**;
 brand-new plugin -> one-time admin **Sync from GitHub** registration first.

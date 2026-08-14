@@ -40,6 +40,20 @@ right, with the human kept at exactly one decision point (the merge).
 | Test harness | `tests/` | Fixture suite for every gate behavior, including runtime-generated secret fixtures (no secret-shaped strings are ever committed) |
 | Benchmark | `docs/packaging-runlog.md` | Metric definitions + run log; the headline metric is "human-caught misses," target 0 |
 
+## The short version
+
+If you use Claude Code, the packaging playbook ships inside this repo
+(`.claude/skills/ship-plugin/`), and Claude discovers it automatically. So the whole
+workflow, once hosted, is: open the repo in Claude Code and say
+
+> Package this skill file into this plugin and ship it: `~/Downloads/their-skill.skill`.
+> Name the plugin `acme-general`.
+
+The agent does the rest: placement, README, version, changelog, build, safety gate,
+branch, PR. You review and merge. That works the same whether you are one person with
+one plugin or a company running a fleet of department repos, each created from this
+template with "Use this template."
+
 ## Quickstart (one plugin, ~15 minutes)
 
 1. **Host the template.** Put this repo in your org (e.g. `YOUR-ORG/skill-foundry`) and
