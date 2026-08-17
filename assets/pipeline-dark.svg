@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1240" height="800" viewBox="0 0 1240 800" role="img" aria-label="Skill Foundry pipeline: intake, package, local gate, branch and PR, CI gate, human merge, delivered to the org.">
+<rect width="1240" height="800" fill="#0D1117"/>
+<text x="52" y="46" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" font-size="11" font-weight="600" fill="#2DD4BF" letter-spacing="2.0">SKILL FOUNDRY</text>
+<text x="52" y="78" font-family="ui-sans-serif,-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,Helvetica,Arial,sans-serif" font-size="27" font-weight="600" fill="#E6EDF3">How a skill ships</text>
+<text x="52" y="102" font-family="ui-sans-serif,-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,Helvetica,Arial,sans-serif" font-size="14" font-weight="400" fill="#8B949E">a skill file goes in, a versioned and scanned plugin reaches the org, one human approval in between</text>
+<text x="1188" y="46" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" font-size="10.4" font-weight="500" fill="#6E7681" letter-spacing="1.4" text-anchor="end">MIT · GITHUB TEMPLATE</text>
+<text x="1188" y="76" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" font-size="13" font-weight="400" fill="#8B949E" text-anchor="end">github.com/tonykipkemboi/skill-foundry</text>
+<text x="52" y="138" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" font-size="10.6" font-weight="600" fill="#6E7681" letter-spacing="1.5">DRIVEN BY THE AGENT   ·   .claude/skills/ship-plugin</text>
+<rect x="52" y="152" width="248" height="150" rx="12" fill="#161B22" stroke="#2A313C" stroke-width="1"/>
+<text x="72" y="184" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" font-size="11" font-weight="600" fill="#2DD4BF" letter-spacing="1.2">01</text>
+<text x="72" y="210" font-family="ui-sans-serif,-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,Helvetica,Arial,sans-serif" font-size="16" font-weight="600" fill="#E6EDF3">Intake</text>
+<text x="72" y="234" font-family="ui-sans-serif,-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,Helvetica,Arial,sans-serif" font-size="12.2" font-weight="400" fill="#8B949E">Unzip and scan every incoming</text>
+<text x="72" y="250.5" font-family="ui-sans-serif,-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,Helvetica,Arial,sans-serif" font-size="12.2" font-weight="400" fill="#8B949E">file in a temp dir, never in</text>
+<text x="72" y="267.0" font-family="ui-sans-serif,-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,Helvetica,Arial,sans-serif" font-size="12.2" font-weight="400" fill="#8B949E">the repo.</text>
+<line x1="72" y1="270" x2="280" y2="270" stroke="#2A313C" stroke-width="1"/>
+<text x="72" y="288" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" font-size="10.6" font-weight="500" fill="#5EEAD4">PII · secrets · baked-in identity</text>
+<line x1="315" y1="227.0" x2="326" y2="227.0" stroke="#2DD4BF" stroke-width="1.4" opacity="0.55"/>
+<path d="M325.5 222.8 L333 227.0 L325.5 231.2" fill="none" stroke="#2DD4BF" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="348" y="152" width="248" height="150" rx="12" fill="#161B22" stroke="#2A313C" stroke-width="1"/>
+<text x="368" y="184" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" font-size="11" font-weight="600" fill="#2DD4BF" letter-spacing="1.2">02</text>
+<text x="368" y="210" font-family="ui-sans-serif,-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,Helvetica,Arial,sans-serif" font-size="16" font-weight="600" fill="#E6EDF3">Package</text>
+<text x="368" y="234" font-family="ui-sans-serif,-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,Helvetica,Arial,sans-serif" font-size="12.2" font-weight="400" fill="#8B949E">Place under skills/, sync the</text>
+<text x="368" y="250.5" font-family="ui-sans-serif,-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,Helvetica,Arial,sans-serif" font-size="12.2" font-weight="400" fill="#8B949E">README, add a changelog entry,</text>
+<text x="368" y="267.0" font-family="ui-sans-serif,-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,Helvetica,Arial,sans-serif" font-size="12.2" font-weight="400" fill="#8B949E">rebuild dist/.</text>
+<line x1="368" y1="270" x2="576" y2="270" stroke="#2A313C" stroke-width="1"/>
+<text x="368" y="288" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" font-size="10.6" font-weight="500" fill="#5EEAD4">build-org-skills.sh</text>
+<line x1="611" y1="227.0" x2="622" y2="227.0" stroke="#2DD4BF" stroke-width="1.4" opacity="0.55"/>
+<path d="M621.5 222.8 L629 227.0 L621.5 231.2" fill="none" stroke="#2DD4BF" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="644" y="152" width="248" height="150" rx="12" fill="#161B22" stroke="#2A313C" stroke-width="1"/>
+<text x="664" y="184" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" font-size="11" font-weight="600" fill="#2DD4BF" letter-spacing="1.2">03</text>
+<text x="664" y="210" font-family="ui-sans-serif,-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,Helvetica,Arial,sans-serif" font-size="16" font-weight="600" fill="#E6EDF3">Local gate</text>
+<text x="664" y="234" font-family="ui-sans-serif,-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,Helvetica,Arial,sans-serif" font-size="12.2" font-weight="400" fill="#8B949E">Six checks emit JSONL findings.</text>
+<text x="664" y="250.5" font-family="ui-sans-serif,-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,Helvetica,Arial,sans-serif" font-size="12.2" font-weight="400" fill="#8B949E">Any hard finding exits 1 and</text>
+<text x="664" y="267.0" font-family="ui-sans-serif,-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,Helvetica,Arial,sans-serif" font-size="12.2" font-weight="400" fill="#8B949E">stops the run.</text>
+<line x1="664" y1="270" x2="872" y2="270" stroke="#2A313C" stroke-width="1"/>
+<text x="664" y="288" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" font-size="10.6" font-weight="500" fill="#5EEAD4">run-checks.sh</text>
+<line x1="907" y1="227.0" x2="918" y2="227.0" stroke="#2DD4BF" stroke-width="1.4" opacity="0.55"/>
+<path d="M917.5 222.8 L925 227.0 L917.5 231.2" fill="none" stroke="#2DD4BF" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="940" y="152" width="248" height="150" rx="12" fill="#161B22" stroke="#2A313C" stroke-width="1"/>
+<text x="960" y="184" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" font-size="11" font-weight="600" fill="#2DD4BF" letter-spacing="1.2">04</text>
+<text x="960" y="210" font-family="ui-sans-serif,-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,Helvetica,Arial,sans-serif" font-size="16" font-weight="600" fill="#E6EDF3">Branch and PR</text>
+<text x="960" y="234" font-family="ui-sans-serif,-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,Helvetica,Arial,sans-serif" font-size="12.2" font-weight="400" fill="#8B949E">Commit on a branch, open the</text>
+<text x="960" y="250.5" font-family="ui-sans-serif,-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,Helvetica,Arial,sans-serif" font-size="12.2" font-weight="400" fill="#8B949E">PR, report the head SHA.</text>
+<line x1="960" y1="270" x2="1168" y2="270" stroke="#2A313C" stroke-width="1"/>
+<text x="960" y="288" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" font-size="10.6" font-weight="500" fill="#5EEAD4">main is never touched</text>
+<path d="M1064.0 302 L1064.0 316 Q1064.0 326 1054.0 326 L34 326 Q24 326 24 336 L24 427.0 Q24 437.0 34 437.0 L43 437.0" fill="none" stroke="#2DD4BF" stroke-width="1.4" opacity="0.5" stroke-dasharray="4 4"/>
+<path d="M42.5 432.8 L50 437.0 L42.5 441.2" fill="none" stroke="#2DD4BF" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="52" y="348" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" font-size="10.6" font-weight="600" fill="#6E7681" letter-spacing="1.5">AUTOMATIC, PLUS EXACTLY ONE HUMAN</text>
+<rect x="52" y="362" width="248" height="150" rx="12" fill="#161B22" stroke="#2A313C" stroke-width="1"/>
+<text x="72" y="394" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" font-size="11" font-weight="600" fill="#2DD4BF" letter-spacing="1.2">05</text>
+<text x="72" y="420" font-family="ui-sans-serif,-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,Helvetica,Arial,sans-serif" font-size="16" font-weight="600" fill="#E6EDF3">CI gate</text>
+<text x="72" y="444" font-family="ui-sans-serif,-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,Helvetica,Arial,sans-serif" font-size="12.2" font-weight="400" fill="#8B949E">The same scripts run again and</text>
+<text x="72" y="460.5" font-family="ui-sans-serif,-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,Helvetica,Arial,sans-serif" font-size="12.2" font-weight="400" fill="#8B949E">upsert one report comment on</text>
+<text x="72" y="477.0" font-family="ui-sans-serif,-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,Helvetica,Arial,sans-serif" font-size="12.2" font-weight="400" fill="#8B949E">the PR.</text>
+<line x1="72" y1="480" x2="280" y2="480" stroke="#2A313C" stroke-width="1"/>
+<text x="72" y="498" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" font-size="10.6" font-weight="500" fill="#5EEAD4">actions/lint-skills</text>
+<line x1="315" y1="437.0" x2="326" y2="437.0" stroke="#2DD4BF" stroke-width="1.4" opacity="0.55"/>
+<path d="M325.5 432.8 L333 437.0 L325.5 441.2" fill="none" stroke="#2DD4BF" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="348" y="362" width="248" height="150" rx="12" fill="#161B22" stroke="#2A313C" stroke-width="1"/>
+<text x="368" y="394" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" font-size="11" font-weight="600" fill="#2DD4BF" letter-spacing="1.2">06</text>
+<text x="368" y="420" font-family="ui-sans-serif,-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,Helvetica,Arial,sans-serif" font-size="16" font-weight="600" fill="#E6EDF3">Human merge</text>
+<text x="368" y="444" font-family="ui-sans-serif,-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,Helvetica,Arial,sans-serif" font-size="12.2" font-weight="400" fill="#8B949E">The only manual step. CODEOWNERS</text>
+<text x="368" y="460.5" font-family="ui-sans-serif,-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,Helvetica,Arial,sans-serif" font-size="12.2" font-weight="400" fill="#8B949E">routes it. Approvable from a</text>
+<text x="368" y="477.0" font-family="ui-sans-serif,-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,Helvetica,Arial,sans-serif" font-size="12.2" font-weight="400" fill="#8B949E">phone.</text>
+<line x1="368" y1="480" x2="576" y2="480" stroke="#2A313C" stroke-width="1"/>
+<text x="368" y="498" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" font-size="10.6" font-weight="500" fill="#5EEAD4">one decision</text>
+<line x1="611" y1="437.0" x2="622" y2="437.0" stroke="#2DD4BF" stroke-width="1.4" opacity="0.55"/>
+<path d="M621.5 432.8 L629 437.0 L621.5 441.2" fill="none" stroke="#2DD4BF" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="644" y="362" width="248" height="150" rx="12" fill="#161B22" stroke="#2A313C" stroke-width="1"/>
+<text x="664" y="394" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" font-size="11" font-weight="600" fill="#2DD4BF" letter-spacing="1.2">07</text>
+<text x="664" y="420" font-family="ui-sans-serif,-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,Helvetica,Arial,sans-serif" font-size="16" font-weight="600" fill="#E6EDF3">Delivered</text>
+<text x="664" y="444" font-family="ui-sans-serif,-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,Helvetica,Arial,sans-serif" font-size="12.2" font-weight="400" fill="#8B949E">The version bump is Claude's</text>
+<text x="664" y="460.5" font-family="ui-sans-serif,-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,Helvetica,Arial,sans-serif" font-size="12.2" font-weight="400" fill="#8B949E">update cache key, so members</text>
+<text x="664" y="477.0" font-family="ui-sans-serif,-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,Helvetica,Arial,sans-serif" font-size="12.2" font-weight="400" fill="#8B949E">actually receive it.</text>
+<line x1="664" y1="480" x2="872" y2="480" stroke="#2A313C" stroke-width="1"/>
+<text x="664" y="498" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" font-size="10.6" font-weight="500" fill="#5EEAD4">plugin.json version</text>
+<line x1="907" y1="437.0" x2="941" y2="437.0" stroke="#2DD4BF" stroke-width="1.4" opacity="0.55"/>
+<path d="M940.5 432.8 L948 437.0 L940.5 441.2" fill="none" stroke="#2DD4BF" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="974.0" y="380.0" width="44" height="27.28" rx="4" fill="#10251F" stroke="#2DD4BF" stroke-width="1" opacity="0.8"/>
+<rect x="1028.0" y="380.0" width="44" height="27.28" rx="4" fill="#10251F" stroke="#2DD4BF" stroke-width="1" opacity="0.8"/>
+<rect x="1082.0" y="380.0" width="44" height="27.28" rx="4" fill="#10251F" stroke="#2DD4BF" stroke-width="1" opacity="0.8"/>
+<rect x="1136.0" y="380.0" width="44" height="27.28" rx="4" fill="#10251F" stroke="#2DD4BF" stroke-width="1" opacity="0.8"/>
+<rect x="974.0" y="417.28" width="44" height="27.28" rx="4" fill="#10251F" stroke="#2DD4BF" stroke-width="1" opacity="0.8"/>
+<rect x="1028.0" y="417.28" width="44" height="27.28" rx="4" fill="#10251F" stroke="#2DD4BF" stroke-width="1" opacity="0.8"/>
+<rect x="1082.0" y="417.28" width="44" height="27.28" rx="4" fill="#10251F" stroke="#2DD4BF" stroke-width="1" opacity="0.8"/>
+<rect x="1136.0" y="417.28" width="44" height="27.28" rx="4" fill="#10251F" stroke="#2DD4BF" stroke-width="1" opacity="0.8"/>
+<rect x="974.0" y="454.56" width="44" height="27.28" rx="4" fill="#10251F" stroke="#2DD4BF" stroke-width="1" opacity="0.8"/>
+<rect x="1028.0" y="454.56" width="44" height="27.28" rx="4" fill="#10251F" stroke="#2DD4BF" stroke-width="1" opacity="0.8"/>
+<rect x="1082.0" y="454.56" width="44" height="27.28" rx="4" fill="#10251F" stroke="#2DD4BF" stroke-width="1" opacity="0.8"/>
+<rect x="1136.0" y="454.56" width="44" height="27.28" rx="4" fill="#10251F" stroke="#2DD4BF" stroke-width="1" opacity="0.8"/>
+<text x="1077.0" y="499.84000000000003" font-family="ui-sans-serif,-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,Helvetica,Arial,sans-serif" font-size="11.4" font-weight="400" fill="#8B949E" text-anchor="middle">every member, on Update</text>
+<rect x="52" y="546" width="1136" height="208" rx="12" fill="#1C2129" stroke="#2A313C" stroke-width="1"/>
+<text x="78" y="576" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" font-size="10.6" font-weight="600" fill="#6E7681" letter-spacing="1.5">INSIDE THE GATE   ·   one JSONL finding format, the same six checks locally and in CI</text>
+<line x1="624" y1="592" x2="624" y2="732" stroke="#2A313C" stroke-width="1"/>
+<text x="78" y="612" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" font-size="11" font-weight="600" fill="#F87171" letter-spacing="1.3">BLOCKS THE MERGE</text>
+<rect x="78" y="626" width="7" height="7" rx="1.5" fill="#F87171"/>
+<text x="96" y="634" font-family="ui-sans-serif,-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,Helvetica,Arial,sans-serif" font-size="12.4" font-weight="400" fill="#C9D1D9">Hardcoded secrets, via gitleaks</text>
+<rect x="78" y="646.5" width="7" height="7" rx="1.5" fill="#F87171"/>
+<text x="96" y="654.5" font-family="ui-sans-serif,-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,Helvetica,Arial,sans-serif" font-size="12.4" font-weight="400" fill="#C9D1D9">Corporate emails and chat user IDs, in every file type</text>
+<rect x="78" y="667.0" width="7" height="7" rx="1.5" fill="#F87171"/>
+<text x="96" y="675.0" font-family="ui-sans-serif,-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,Helvetica,Arial,sans-serif" font-size="12.4" font-weight="400" fill="#C9D1D9">SKILL.md frontmatter that is invalid or off-spec</text>
+<rect x="78" y="687.5" width="7" height="7" rx="1.5" fill="#F87171"/>
+<text x="96" y="695.5" font-family="ui-sans-serif,-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,Helvetica,Arial,sans-serif" font-size="12.4" font-weight="400" fill="#C9D1D9">GitHub Actions not pinned to a full commit SHA</text>
+<rect x="78" y="708.0" width="7" height="7" rx="1.5" fill="#F87171"/>
+<text x="96" y="716.0" font-family="ui-sans-serif,-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,Helvetica,Arial,sans-serif" font-size="12.4" font-weight="400" fill="#C9D1D9">Workflows shipping without a permissions block</text>
+<text x="648" y="612" font-family="ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" font-size="11" font-weight="600" fill="#8B949E" letter-spacing="1.3">ADVISES, NEVER BLOCKS</text>
+<rect x="648" y="626" width="7" height="7" rx="1.5" fill="none" stroke="#6E7681" stroke-width="1.2"/>
+<text x="666" y="634" font-family="ui-sans-serif,-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,Helvetica,Arial,sans-serif" font-size="12.4" font-weight="400" fill="#C9D1D9">SKILL.md body over 500 lines</text>
+<rect x="648" y="646.5" width="7" height="7" rx="1.5" fill="none" stroke="#6E7681" stroke-width="1.2"/>
+<text x="666" y="654.5" font-family="ui-sans-serif,-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,Helvetica,Arial,sans-serif" font-size="12.4" font-weight="400" fill="#C9D1D9">Descriptions too thin to trigger reliably</text>
+<rect x="648" y="667.0" width="7" height="7" rx="1.5" fill="none" stroke="#6E7681" stroke-width="1.2"/>
+<text x="666" y="675.0" font-family="ui-sans-serif,-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,Helvetica,Arial,sans-serif" font-size="12.4" font-weight="400" fill="#C9D1D9">Description close to the listing truncation cap</text>
+<rect x="648" y="687.5" width="7" height="7" rx="1.5" fill="none" stroke="#6E7681" stroke-width="1.2"/>
+<text x="666" y="695.5" font-family="ui-sans-serif,-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,Helvetica,Arial,sans-serif" font-size="12.4" font-weight="400" fill="#C9D1D9">argument-hint declared but never used in the body</text>
+<rect x="648" y="708.0" width="7" height="7" rx="1.5" fill="none" stroke="#6E7681" stroke-width="1.2"/>
+<text x="666" y="716.0" font-family="ui-sans-serif,-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,Helvetica,Arial,sans-serif" font-size="12.4" font-weight="400" fill="#C9D1D9">Slack channel IDs committed by accident</text>
+<rect x="648" y="728.5" width="7" height="7" rx="1.5" fill="none" stroke="#6E7681" stroke-width="1.2"/>
+<text x="666" y="736.5" font-family="ui-sans-serif,-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,Helvetica,Arial,sans-serif" font-size="12.4" font-weight="400" fill="#C9D1D9">A skill in skills/ missing from the README</text>
+<text x="52" y="776" font-family="ui-sans-serif,-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,Helvetica,Arial,sans-serif" font-size="12" font-weight="400" fill="#8B949E">Threat model: accidental internal harm, not a hostile marketplace. A green local run predicts a green PR.</text>
+<text x="1188" y="776" font-family="ui-sans-serif,-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,Helvetica,Arial,sans-serif" font-size="11.4" font-weight="400" fill="#6E7681" text-anchor="end">one repo per team, created from the template</text>
+</svg>

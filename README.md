@@ -1,5 +1,10 @@
 # Skill Foundry
 
+<p align="center">
+  <img src="assets/hero.png" width="860"
+       alt="Loose skill files pass through a single gate and come out the other side as packaged plugins distributed to everyone.">
+</p>
+
 **A governed pipeline for turning loose AI skill files into versioned, security-scanned,
 org-distributed Claude plugins.** Teams write skills; this framework packages them,
 gates them, and ships them, with one human approval and a paper trail.
@@ -17,11 +22,11 @@ believes they shipped, and a single person's laptop as the deployment substrate.
 
 Skill Foundry replaces that with a repeatable loop:
 
-```
-skill files in  ->  intake scan  ->  place + version + README + changelog
-                ->  policy gate (secrets / PII / structure)  ->  PR
-                ->  one human merge  ->  live for the org via plugin update
-```
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/pipeline-dark.svg">
+  <img src="assets/pipeline-light.svg"
+       alt="Seven stages. Driven by the agent: intake, package, local gate, branch and PR. Then automatic plus exactly one human: CI gate, human merge, delivered to every member on Update. Inside the gate, five checks block the merge and six advise.">
+</picture>
 
 The loop is executed by an AI agent (Claude Code) following the **ship-plugin** skill in
 `.claude/skills/ship-plugin/`, a playbook written so an agent with zero context gets it
